@@ -6,7 +6,7 @@
       "description": "about dress 1",
       "price": 19,
       "availableSizes": ["XL", "XXL"],
-      "image": "https://picsum.photos/200/300"
+      "image": "https://picsum.photos/300/300"
     },
     {
       "_id": "dress2",
@@ -14,7 +14,7 @@
       "description": "about dress 2",
       "price": 19,
       "availableSizes": ["X", "XL", "XXL"],
-      "image": "https://picsum.photos/200/300"
+      "image": "https://picsum.photos/300/300"
     },
     {
       "_id": "dress3",
@@ -22,7 +22,7 @@
       "description": "about dress 3",
       "price": 19,
       "availableSizes": ["XL", "XXL"],
-      "image": "https://picsum.photos/200/300"
+      "image": "https://picsum.photos/300/300"
     },
     {
       "_id": "dress4",
@@ -30,7 +30,7 @@
       "description": "about dress 4",
       "price": 19,
       "availableSizes": ["XL", "XXL"],
-      "image": "https://picsum.photos/200/300"
+      "image": "https://picsum.photos/300/300"
     },
     {
       "_id": "dress5",
@@ -38,7 +38,7 @@
       "description": "about dress 5",
       "price": 19,
       "availableSizes": ["XL", "XXL"],
-      "image": "https://picsum.photos/200/300"
+      "image": "https://picsum.photos/300/300"
     },
     {
       "_id": "dress6",
@@ -46,7 +46,7 @@
       "description": "about dress 6",
       "price": 19,
       "availableSizes": ["XL", "XXL"],
-      "image": "https://picsum.photos/200/300"
+      "image": "https://picsum.photos/300/300"
     }
   ]
 }

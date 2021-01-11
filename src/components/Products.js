@@ -1,4 +1,5 @@
 import React, { Component } from "react";
+import formatCurrency from "../util"
 
 export default class Products extends Component {
   render() {
@@ -6,13 +7,13 @@ export default class Products extends Component {
       <div>
         <ul className="products">
           {this.props.products.map((product) => (
-            <li key={product.id}>
+            <li key={product._id}>
               <a href={"#" + product._id}>
-                <img src={product.image} alt="product image" />
+                <img src={product.image} alt={product.title} />
                 <p>{product.title}</p>
               </a>
               <div className="product-price">
-                <div>{product.price}</div>
+                <div>{formatCurrency(product.price)}</div>
                 <button className="button primary">Add To Cart</button>
               </div>
             </li>
