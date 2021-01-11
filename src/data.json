@@ -39,6 +39,14 @@
       "price": 19,
       "availableSizes": ["XL", "XXL"],
       "image": "https://picsum.photos/200/300"
+    },
+    {
+      "_id": "dress6",
+      "title": "Dress 6",
+      "description": "about dress 6",
+      "price": 19,
+      "availableSizes": ["XL", "XXL"],
+      "image": "https://picsum.photos/200/300"
     }
   ]
 }
