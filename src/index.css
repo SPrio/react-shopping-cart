@@ -33,7 +33,7 @@ header {
   color: #ffffff;
   display: flex;
   align-items: center;
-  padding: .5rem;
+  padding: 0.5rem;
 }
 header a {
   color: #ffffff;
@@ -49,4 +49,15 @@ footer {
   display: flex;
   justify-content: center;
   align-items: center;
+}
+
+.content {
+  display: flex;
+  flex-wrap: wrap;
+}
+.main {
+  flex: 3 60rem;
+}
+.sideBar {
+  flex: 1 20rem;
 }
