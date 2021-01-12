@@ -1,3 +1,7 @@
 # React Shopping Cart
 
-1. Step-1: Create React App
+## Steps:
+
+1. Create React App
+2. Products Component
+3. Filter Component
