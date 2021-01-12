@@ -9,33 +9,37 @@ class App extends React.Component {
     super();
     this.state = {
       products: data.products,
-      cartItems: [],
+      cartItems: localStorage.getItem("cartItems")
+        ? JSON.parse(localStorage.getItem("cartItems"))
+        : [],
       size: "",
       sort: "",
     };
   }
 
-removeFromCart = (product) => {
-  const cartItems = this.state.cartItems.slice();
-  this.setState({
-    cartItems: cartItems.filter((x) => x._id != product._id)
-  })
-}
+  removeFromCart = (product) => {
+    const cartItems = this.state.cartItems.slice().filter((x) => x._id !== product._id);
+    this.setState({
+      cartItems: cartItems,
+    });
+    localStorage.setItem("cartItems", JSON.stringify(cartItems));
+  };
 
-addToCart = (product) => {
-  const cartItems = this.state.cartItems.slice();
-  let alreadyInCart = false;
-  cartItems.forEach(item => {
-    if(item._id === product._id){
-      item.count++;
-      alreadyInCart = true;
+  addToCart = (product) => {
+    const cartItems = this.state.cartItems.slice();
+    let alreadyInCart = false;
+    cartItems.forEach((item) => {
+      if (item._id === product._id) {
+        item.count++;
+        alreadyInCart = true;
+      }
+    });
+    if (!alreadyInCart) {
+      cartItems.push({ ...product, count: 1 });
     }
-  });
-  if(!alreadyInCart){
-    cartItems.push({...product, count: 1});
-  }
-  this.setState({cartItems});
-}
+    this.setState({ cartItems });
+    localStorage.setItem("cartItems", JSON.stringify(cartItems));
+  };
 
   sortProducts = (events) => {
     console.log(events.target.value);
@@ -90,10 +94,16 @@ addToCart = (product) => {
                 filterProducts={this.filterProducts}
                 sortProducts={this.sortProducts}
               />
-              <Products products={this.state.products} addToCart={this.addToCart}/>
+              <Products
+                products={this.state.products}
+                addToCart={this.addToCart}
+              />
             </div>
             <div className="sideBar">
-              <Cart cartItems={this.state.cartItems} removeFromCart={this.removeFromCart}/>
+              <Cart
+                cartItems={this.state.cartItems}
+                removeFromCart={this.removeFromCart}
+              />
             </div>
           </div>
         </main>
