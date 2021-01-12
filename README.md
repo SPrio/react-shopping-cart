@@ -6,3 +6,4 @@
 2. Products Component
 3. Filter Component
 4. Cart Component
+5. Checkout Form
