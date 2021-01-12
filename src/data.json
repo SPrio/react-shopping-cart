@@ -5,14 +5,14 @@
       "title": "Dress 1",
       "description": "about dress 1",
       "price": 19,
-      "availableSizes": ["XL", "XXL"],
+      "availableSizes": ["L", "XXL"],
       "image": "https://picsum.photos/300/300"
     },
     {
       "_id": "dress2",
       "title": "Dress 2",
       "description": "about dress 2",
-      "price": 19,
+      "price": 120,
       "availableSizes": ["X", "XL", "XXL"],
       "image": "https://picsum.photos/300/300"
     },
@@ -20,7 +20,7 @@
       "_id": "dress3",
       "title": "Dress 3",
       "description": "about dress 3",
-      "price": 19,
+      "price": 60,
       "availableSizes": ["XL", "XXL"],
       "image": "https://picsum.photos/300/300"
     },
@@ -28,23 +28,23 @@
       "_id": "dress4",
       "title": "Dress 4",
       "description": "about dress 4",
-      "price": 19,
-      "availableSizes": ["XL", "XXL"],
+      "price": 49,
+      "availableSizes": ["S", "XXL"],
       "image": "https://picsum.photos/300/300"
     },
     {
       "_id": "dress5",
       "title": "Dress 5",
       "description": "about dress 5",
-      "price": 19,
-      "availableSizes": ["XL", "XXL"],
+      "price": 18,
+      "availableSizes": ["L", "XXL"],
       "image": "https://picsum.photos/300/300"
     },
     {
       "_id": "dress6",
       "title": "Dress 6",
       "description": "about dress 6",
-      "price": 19,
+      "price": 38,
       "availableSizes": ["XL", "XXL"],
       "image": "https://picsum.photos/300/300"
     }
