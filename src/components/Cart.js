@@ -1,6 +1,6 @@
 import React, { Component } from "react";
 import formatCurrency from "../util";
-
+import Fade from "react-reveal/Fade";
 export default class Cart extends Component {
   constructor(props) {
     super(props);
@@ -31,25 +31,27 @@ export default class Cart extends Component {
           </div>
         )}
         <div className="cart">
-          <ul className="cart-items">
-            {cartItems.map((cartItem) => (
-              <li key={cartItem._id}>
-                <div>
-                  <img src={cartItem.image} alt={cartItem.title}></img>
-                </div>
-                <div>{cartItem.title}</div>
-                <div className="right">
-                  {formatCurrency(cartItem.price)} X {cartItem.count}{" "}
-                  <button
-                    className="button"
-                    onClick={() => this.props.removeFromCart(cartItem)}
-                  >
-                    Remove
-                  </button>
-                </div>
-              </li>
-            ))}
-          </ul>
+          <Fade left cascade>
+            <ul className="cart-items">
+              {cartItems.map((cartItem) => (
+                <li key={cartItem._id}>
+                  <div>
+                    <img src={cartItem.image} alt={cartItem.title}></img>
+                  </div>
+                  <div>{cartItem.title}</div>
+                  <div className="right">
+                    {formatCurrency(cartItem.price)} X {cartItem.count}{" "}
+                    <button
+                      className="button"
+                      onClick={() => this.props.removeFromCart(cartItem)}
+                    >
+                      Remove
+                    </button>
+                  </div>
+                </li>
+              ))}
+            </ul>
+          </Fade>
         </div>
         {cartItems.length !== 0 && (
           <div>
@@ -74,44 +76,46 @@ export default class Cart extends Component {
               </div>
             </div>
             {this.state.showCheckout && (
-              <div className="cart">
-                <form onSubmit={this.createOrder}>
-                  <ul className="form-container">
-                    <li>
-                      <label>Email</label>
-                      <input
-                        name="email"
-                        type="email"
-                        required
-                        onChange={this.handleInput}
-                      ></input>
-                    </li>
-                    <li>
-                      <label>Name</label>
-                      <input
-                        name="name"
-                        type="text"
-                        required
-                        onChange={this.handleInput}
-                      ></input>
-                    </li>
-                    <li>
-                      <label>Address</label>
-                      <input
-                        name="address"
-                        type="textarea"
-                        required
-                        onChange={this.handleInput}
-                      ></input>
-                    </li>
-                    <li>
-                      <button className="button primary" type="submit">
-                        Checkout
-                      </button>
-                    </li>
-                  </ul>
-                </form>
-              </div>
+              <Fade right cascade>
+                <div className="cart">
+                  <form onSubmit={this.createOrder}>
+                    <ul className="form-container">
+                      <li>
+                        <label>Email</label>
+                        <input
+                          name="email"
+                          type="email"
+                          required
+                          onChange={this.handleInput}
+                        ></input>
+                      </li>
+                      <li>
+                        <label>Name</label>
+                        <input
+                          name="name"
+                          type="text"
+                          required
+                          onChange={this.handleInput}
+                        ></input>
+                      </li>
+                      <li>
+                        <label>Address</label>
+                        <input
+                          name="address"
+                          type="textarea"
+                          required
+                          onChange={this.handleInput}
+                        ></input>
+                      </li>
+                      <li>
+                        <button className="button primary" type="submit">
+                          Checkout
+                        </button>
+                      </li>
+                    </ul>
+                  </form>
+                </div>
+              </Fade>
             )}
           </div>
         )}
